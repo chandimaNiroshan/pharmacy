@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cniroshan2.000webhostapp.com/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://cniroshan2.000webhostapp.com/bootstrap.min.css">
+    <!--script type="text/javascript" src="https://cniroshan2.000webhostapp.com/app.js"></script-->
+    <script type="text/javascript" src="/js/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cniroshan2.000webhostapp.com/style.css">
+</head>
+<body ng-app="myApp">
+<h1>Welcome to Pharmacy</h1>
+<div ng-controller="usersController">
+    <input type="button" class="button button2" value="Add" ng-click="add()">
+    <input type="text" placeholder="enter number" id="num">
+    <h1>{{count}}</h1>
+<table class="table table-sm" style="border: 1px solid;width: 450px">
+    <th>Name</th>
+    <th>Function</th>
+    <th>Email</th>
+    <tr ng-repeat="name in names" class="bg-success" style="border: 1px solid">
+        <td>{{name.name}}</td>
+        <td>{{name.function}}</td>
+        <td>{{name.email}}</td>
+        <td><input type="button" value="Update" ng-click="update()"></td>
+        <td><input type="button" value="Delete" ng-click="delete()"></td>
+    </tr>
+</table>
+
+</div>
+</body>
+</html>
